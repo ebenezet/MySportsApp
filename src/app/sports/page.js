@@ -30,9 +30,9 @@ export default async function SportsPage({ searchParams }) {
   }
 
   return (
-    <div className="films-page">
+    <div className="flex flex-col items-center gap-6 bg-green-300 height=80vh}">
       <h2 className="myfilms">Most played sports in the world ... </h2>
-      <div className="sort-links">
+      <div className="flex gap-20 font-bold">
         <Link href="/sports?sortBy=asc">Sort Asc</Link>
         <Link href="/sports?sortBy=desc">Sort Desc</Link>
         <Link href="/sports">Reset Sort</Link>
@@ -46,7 +46,7 @@ export default async function SportsPage({ searchParams }) {
           ))}
         </ul>
       </Suspense>
-      <h4>
+      <h4 className="flex flex-col items-center">
         Fancy Adding a sport to the database?
         <Link href="/sports/add-sport" className="clickme">
           <NewSportButton />

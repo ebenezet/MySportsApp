@@ -6,29 +6,35 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { Crimson_Text } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+export const crimson = Crimson_Text({
+  weight: "400",
+  style: "normal",
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-crimson",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const metadata = {
+  title: "Sports Blog",
+  description: "Social network about sports",
+  openGraph: {
+    title: "Sports Blog",
+    description: "Social network about sports",
+    type: "website",
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <Header />
+        <body className={`${crimson.variable} antialiased`}>
+          <Header className="flex flex-start" />
           <header className="flex justify-end items-center p-4 gap-4 h-16">
             <SignedOut>
               <SignInButton mode="modal" />

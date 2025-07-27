@@ -25,9 +25,10 @@ export default async function Page() {
   console.log(userPostsOnSports);
 
   return (
-    <div>
+    <div className="flex height={70vh} bg-green-300">
       <p>Welcome back {userInfo.username}</p>
       <p>user id: {userInfo.id}</p>
+      <p>{userPostsOnSports.mostfamousperson}</p>
     </div>
   );
 }
