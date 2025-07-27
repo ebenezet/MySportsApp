@@ -19,7 +19,7 @@ export default async function UserForm() {
 
     return (
         <div className="flex bg-green-300 height={600} flex-col items-center ">
-        <form action={handleUserInfoSubmit} className="flex flex-col items-center">
+        <form action={handleUserInfoSubmit} className="flex flex-col items-center gap-6">
             <div>
             <label htmlFor="username" className="flex border-1 border-black border-solid bg-amber-100">Username</label>
             <input name="username" placeholder="carmelofthewoods" className="flex border-1 border-black border-solid bg-white"/>
