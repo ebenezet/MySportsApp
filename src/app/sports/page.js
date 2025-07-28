@@ -30,7 +30,7 @@ export default async function SportsPage({ searchParams }) {
   }
 
   return (
-    <div className="flex flex-col items-center gap-6 bg-green-300 height=80vh}">
+    <div className="flex flex-col items-center gap-6 bg-green-300 h-85">
       <h2 className="myfilms">Most played sports in the world ... </h2>
       <div className="flex gap-20 font-bold">
         <Link href="/sports?sortBy=asc">Sort Asc</Link>
